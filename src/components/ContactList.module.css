@@ -1,0 +1,13 @@
+.ul {
+  width: 300px;
+  display: block;
+}
+
+.li {
+  display: flex;
+  flex-flow: row;
+}
+
+.button {
+  margin: 3px 0 0 auto;
+}
