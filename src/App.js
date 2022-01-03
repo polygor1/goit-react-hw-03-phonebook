@@ -80,7 +80,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>goit-react-hw-02-phonebook</h1>
+        <h1>goit-react-hw-03-phonebook</h1>
         <ContactForm onSubmit={this.formSubmitHandler} />
         <h2 className="title"> Contacts </h2>
         <Filter value={filter} onChange={this.changeFilter} />
