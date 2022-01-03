@@ -18,6 +18,22 @@ class App extends Component {
     filter: '',
   };
 
+  componentDidMount() {
+    // читаем данные из localStorage
+    const contacts = localStorage.getItem('contacts');
+    const parseContacts = JSON.parse(contacts);
+    // если они там есть ;)
+    if (parseContacts) {
+      this.setState({ contacts: parseContacts });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    // если данные изменились пишем всех в localStorage
+    if (prevState.contacts !== this.state.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
+  }
   formSubmitHandler = data => {
     const nextName = data.name.toLowerCase();
     // проверка на совпадение с БД
