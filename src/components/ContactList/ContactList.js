@@ -28,14 +28,3 @@ ContactList.propTypes = {
     }),
   ),
 };
-
-// <li key={item.id} className={styles.li}>
-//   {item.name}: {item.number}
-//   <button
-//     className={styles.button}
-//     type="button"
-//     onClick={() => this.props.onDeleteContact(item.id)}
-//   >
-//     Delete
-//   </button>
-// </li>;
