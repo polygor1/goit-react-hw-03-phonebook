@@ -6,11 +6,11 @@ export class ContactListItem extends Component {
   render() {
     return (
       <li className={styles.li}>
-        {this.props.item.name}: {this.props.item.number}
+        {this.props.name}: {this.props.number}
         <button
           className={styles.button}
           type="button"
-          onClick={() => this.props.onDeleteContact(this.props.item.id)}
+          onClick={this.props.onDeleteContact}
         >
           Delete
         </button>

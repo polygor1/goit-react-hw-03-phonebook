@@ -7,11 +7,12 @@ export class ContactList extends Component {
   render() {
     return (
       <ul className={styles.ul}>
-        {this.props.contacts.map(item => (
+        {this.props.contacts.map(({ id, name, number }) => (
           <ContactListItem
-            key={item.id}
-            item={item}
-            onDeleteContact={this.props.onDeleteContact}
+            key={id}
+            name={name}
+            number={number}
+            onDeleteContact={() => this.props.onDeleteContact(id)}
           />
         ))}
       </ul>
